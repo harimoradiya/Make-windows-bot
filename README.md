@@ -23,6 +23,8 @@ For the robot to listen to our voice/speech
 <code>pip install speechRecognition</code></p>
 <p dir="auto">To speak out, or text to speech
 <code>pip install pyttsx3</code></p>
+Install pyaudio - Note(Python 2.7, 3.4, 3.5, and 3.6. For those versions Supports 😒)
+<code>pip install pyAudio</code></p>
 <p dir="auto">To get funny jokes
 <code>pip install pyjokes</code></p>
 <p dir="auto">To get wikipedia data
