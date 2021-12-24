@@ -32,7 +32,8 @@ def wishMe():
     else:
         speak("Good Evening!")
 
-    speak("I am Bot Sir. Please tell me how may I help you")
+    speak("I am Bot Sir") 
+    speak("Please tell me how may I help you")
 
 
 # def recognize_speech_from_mic(recognizer, microphone):
@@ -88,8 +89,8 @@ def takeCommand():
 
     except Exception as e:
         # print(e)
-        print("Say that again please...")
-        speak("Say that  again please")
+        print("I, didn't catch that say again...")
+        speak("I, didn't catch that say again")
         return "None"
     return query
 
@@ -98,8 +99,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('youremail@gmail.com', 'your-password')
-    server.sendmail('youremail@gmail.com', to, content)
+    server.login('Your-mailid', 'Your-password')
+    server.sendmail('Your-mail-id', to, content)
     server.close()
 
 
@@ -138,7 +139,7 @@ if __name__ == "__main__":
 
 
         elif "what is" in query or "who is" in query:
-            client = wolframalpha.Client("Y6V4XA-GT8UQKHUTU")
+            client = wolframalpha.Client("Your-App-id")
             res = client.query(query)
             try:
                 print(next(res.results).text)
@@ -160,19 +161,19 @@ if __name__ == "__main__":
             speak('Current time is ' + time)
 
         elif 'open code' in query:
-            codePath = "C:\\Users\\Haris\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            codePath = "C:\\Users\\Hari\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
 
         elif 'email to harry' in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "harryyourEmail@gmail.com"
+                to = "test123@gmail.com"
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
                 print(e)
-                speak("Sorry my friend harry bhai. I am not able to send this email")
+                speak("Sorry, I am not able to send this email")
 
 
         elif 'joke' in query:
@@ -189,7 +190,7 @@ if __name__ == "__main__":
 
             # Google Open weather website
             # to get API of Open weather
-            api_key = "4f7d53af57fc1b6b98037db290fc347f"
+            api_key = "Your-api-key"
             base_url = "http://api.openweathermap.org/data/2.5/weather?"
             speak(" City name ")
             print("City name : ")
